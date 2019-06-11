@@ -1,11 +1,11 @@
 # Site settings
-author: Adjoa Ntoso
-title: 
+author: Adjoa N.
+title: Adjoa's Flatiron School Blog
 header-img: img/home-bg.png
 email: adjoaan@gmail.com
-copyright_name: Adjoa Ntoso
+copyright_name: Adjoa N.
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Welcome To My Blog!
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  AANtoso
