@@ -12,6 +12,7 @@ Since I started this course, I have realized how similar coding it to learning a
 
 On Friday during a pair programming session with a classmate, I asked if he know if there was an easier way to break down what iterations do. I found it really helpful as this is a concept that I struggle with very much.
 
+![](http://)
 ```
 def square_array(array)
   new_numbers = []
