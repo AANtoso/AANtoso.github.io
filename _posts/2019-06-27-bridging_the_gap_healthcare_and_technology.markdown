@@ -15,6 +15,7 @@ Setting up the structure/"bones" of my classes and methods was also pretty strai
 Scraping was one of the most daunting and nerve-wracking processes that I have ever encountered in an assignment.
 
 **SCRAPING:**
+
 For this website, I decided to scrape the list of police station names as my first level scrape. Then, I scraped the details of the police stations as my second level scrape. 
 ```
 station_list = doc.css(".Table-body .Table-link").map(&:text)
@@ -29,6 +30,7 @@ link_list = doc.css("a[class=Table-row]").map{|link| link["href"]}
 However, this was not returning all 25 of the links after running it in irb in my terminal. After debugging and talking things out with a wonderful classmate, we came to the conclusion that I needed to remove the 'a[class=' and replace it with a '.' . This solved this problem and was a huge step forward for me!
 
 **THOUGHTS:**
+
 I am not much of a writer, so writing these blogs are a bit challenging to me. However, there are a few take-aways that I would like to share from doing this project.
 1. I will encounter a rollercoaster of emotions when building portfolio projects from scratch (such as going from "I can do it", to "there is no way, I quit", to "my computer is about to go out the window").
 2. There is no such thing as a "stupid question" (not asking for help will do more harm than good).
