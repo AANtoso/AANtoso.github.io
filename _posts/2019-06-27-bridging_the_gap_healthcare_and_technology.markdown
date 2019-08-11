@@ -1,17 +1,37 @@
 ---
 layout: post
-title:      "Bridging The Gap: Healthcare and             Technology!"
-date:       2019-06-27 15:42:11 +0000
+title:      "CLI Data Gem Portfolio Project"
+date:       2019-06-27 11:42:12 -0400
 permalink:  bridging_the_gap_healthcare_and_technology
 ---
 
- 
-The worlds of healthcare and technology are very different. However, healthcare now uses EMR (electronic medical records) to chart on patients. EMR has made everything easier to keep track of. There are still some setback with EMR. But overall, it has made daily life at the hospital so much smoother.
+Being primarily involved in the healthcare field, when I heard that we had to make a program that took a page which had a list of information and use it to build a CLI gem, I naturally turned to using a medication website. However, after playing around with this particular kind of website and talking with Lantz after trying to scrape it, it was clear that it was going ot be much harder than I was ready to handle.
+I have many friends who are in law enforcement, so I resorted to using a website that listed several police stations.
 
-Until, you are getting a transfer patient from another healthcare agency or system. EMRs don't have the ability to "talk to each other". What I mean by this is, they can't share or relay information to each other. Part of this is due to HIPPA rules. The other part is due to the fact that they use different applications and EHR platforms. 
+**THE SET-UP:**
 
-Why is this a problem?
-When we are getting a transfer patient, we get "word-of-mouth" report. However, this does not always give us the complete history of the patient. More often than we would like to admit, information is left out or "wrongly reported". This, in turn, leads to healthcare errors. The healthcare errors, unfortunately (depending on what the error involved), can lead to patients ending up in critical condition, or even death.
+Setting up the whole project was slightly scary. However, after reviewing several videos that were provided to us, and doing a walkthrough with Lantz it became a bit more clear and straightforward. 
+Setting up the structure/"bones" of my classes and methods was also pretty straight forward once I realized that everything would start to "fall into place" after I stopped thinking "I can't do this" (of course only until I circle back to that feeling after encountering yet another error).
+Scraping was one of the most daunting and nerve-wracking processes that I have ever encountered in an assignment.
 
-The occurrence of these errors can be lessened which is why I wanted to get into Software Engineering. I would like to be a part of an innovation team that creates am app that is able to transfer EMRs from one hospital to another.
+**SCRAPING:**
+For this website, I decided to scrape the list of police station names as my first level scrape. Then, I scraped the details of the police stations as my second level scrape. 
+```
+station_list = doc.css(".Table-body .Table-link").map(&:text)
+link_list = doc.css(".Table-row").map{|link| link["href"]}
+```
+Creating this snippet of code was probably the most tedious part of the scraping. Mainly because scraping was a concept that I did not grasp at all the first couple of times that I reviewed it. I had to spend hours reviewing it and watching videos in order to even get the gist of it. 
+I also ran into a more challenging issue with the link_list scrape.
+My previous code looks like this:
+```
+link_list = doc.css("a[class=Table-row]").map{|link| link["href"]}
+```
+However, this was not returning all 25 of the links after running it in irb in my terminal. After debugging and talking things out with a wonderful classmate, we came to the conclusion that I needed to remove the 'a[class=' and replace it with a '.' . This solved this problem and was a huge step forward for me!
+
+**THOUGHTS:**
+I am not much of a writer, so writing these blogs are a bit challenging to me. However, there are a few take-aways that I would like to share from doing this project.
+1. I will encounter a rollercoaster of emotions when building portfolio projects from scratch (such as going from "I can do it", to "there is no way, I quit", to "my computer is about to go out the window").
+2. There is no such thing as a "stupid question" (not asking for help will do more harm than good).
+3. There are many ways to do the same thing (try not to get flustered when you see something different).
+4. We are all in this together! You are NEVER alone.
 
