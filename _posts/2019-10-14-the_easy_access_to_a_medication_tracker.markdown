@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "The Easy Access to a Medication Tracker"
-date:       2019-10-14 23:31:59 +0000
+date:       2019-10-14 19:32:00 -0400
 permalink:  the_easy_access_to_a_medication_tracker
 ---
 
@@ -31,7 +31,7 @@ end
 
 The difference is I had to rename class therapeutic_class.
 
-In order to do so I had to create a new migration by running rake db:create_migration NAME=name_here. I named the migtation change_class_to_therapeutic_class. Then I entered the following code into the change method. 
+In order to do so I had to create a new migration by running 'rake db:create_migration NAME=name_here'. I named the migration change_class_to_therapeutic_class. Then I entered the following code into the change method. 
 
 ```
 class ChangeClassToTherapeuticClass < ActiveRecord::Migration
@@ -41,7 +41,7 @@ class ChangeClassToTherapeuticClass < ActiveRecord::Migration
 end
 ```
 
-After entering this method, I ran rake db:migrate. My schema then changed.
+After entering this method, I ran 'rake db:migrate'. My schema then changed.
 This is what my code looks like in my schema. Class was changed to therapeutic_class.
 
 ```
